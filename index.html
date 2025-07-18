@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Zapatos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .excel-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .header {
+            background: #2c5aa0;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .brand-section-title {
+            background: #4472c4;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .umbro-section-title {
+            background: #70ad47;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+        
+        .table-header {
+            background: #d9e2f3;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+            border: 1px solid #b4c6e7;
+        }
+        
+        .umbro-table-header {
+            background: #e2efda;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+            border: 1px solid #a9d18e;
+        }
+        
+        .brand-cell {
+            background: #e7f3ff;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #b4c6e7;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            width: 60px;
+            font-size: 12px;
+            padding: 4px;
+            color: #2c5aa0;
+        }
+        
+        td {
+            border: 1px solid #d1d1d1;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        .codigo {
+            font-weight: bold;
+            color: #2c5aa0;
+        }
+        
+        .precio {
+            font-weight: bold;
+            color: #c5504b;
+        }
+        
+        .costo {
+            color: #70ad47;
+            font-weight: bold;
+        }
+        
+        .foto-cell {
+            width: 80px;
+            background: #f8f9fa;
+        }
+        
+        .foto-placeholder {
+            width: 60px;
+            height: 40px;
+            background: #e9ecef;
+            border: 1px dashed #adb5bd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 10px;
+            color: #6c757d;
+        }
+        
+        .converse-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .converse-table tr:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .umbro-table tr:nth-child(even) {
+            background-color: #f1f8e9;
+        }
+        
+        .umbro-table tr:hover {
+            background-color: #e8f5e8;
+        }
+        
+        .umbro-table .codigo {
+            color: #548235;
+        }
+        
+        .umbro-table td {
+            border: 1px solid #a9d18e;
+        }
+        
+        .download-section {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-top: 2px solid #e9ecef;
+        }
+        
+        .download-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        
+        .download-btn:hover {
+            background: #218838;
+        }
+        
+        .table-container {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="excel-container">
+        <div class="header">
+            CATÁLOGO DE ZAPATOS
+        </div>
+        
+        <!-- TABLA CONVERSE -->
+        <div class="table-container">
+            <div class="brand-section-title">CONVERSE</div>
+            <table class="converse-table">
+                <thead>
+                    <tr>
+                        <th class="table-header">MARCA</th>
+                        <th class="table-header">CÓDIGO</th>
+                        <th class="table-header">SEXO</th>
+                        <th class="table-header">TALLAS</th>
+                        <th class="table-header">FOTO</th>
+                        <th class="table-header">Precio Prom</th>
+                        <th class="table-header">Costo</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td rowspan="16" class="brand-cell">CONVERSE</td>
+        <td class="codigo">172801C</td>
+        <td>HOMBRE</td>
+        <td>40 - 44</td>
+        <td class="foto-cell"><img src="172801C.png" alt="172801C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 134.95</td>
+        <td class="costo">S/ 81.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A09457C</td>
+        <td>HOMBRE</td>
+        <td>40 - 44</td>
+        <td class="foto-cell"><img src="A09457C.png" alt="A09457C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 144.95</td>
+        <td class="costo">S/ 87.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A14718C</td>
+        <td>HOMBRE</td>
+        <td>40 - 44</td>
+        <td class="foto-cell"><img src="A14718C.png" alt="A14718C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 174.95</td>
+        <td class="costo">S/ 105.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A06435C</td>
+        <td>HOMBRE</td>
+        <td>40 - 44</td>
+        <td class="foto-cell"><img src="A06435C.png" alt="A06435C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 259.90</td>
+        <td class="costo">S/ 125.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">132173C</td>
+        <td>HOMBRE</td>
+        <td>40 - 44</td>
+        <td class="foto-cell"><img src="132173C.png" alt="132173C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 342.50</td>
+        <td class="costo">S/ 96.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A11549C</td>
+        <td>DAMA</td>
+        <td>36.5 - 39.5</td>
+        <td class="foto-cell"><img src="A11549C.png" alt="A11549C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 195.00</td>
+        <td class="costo">S/ 120.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A10420C</td>
+        <td>DAMA</td>
+        <td>36 - 38</td>
+        <td class="foto-cell"><img src="A10420C.png" alt="A10420C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 159.00</td>
+        <td class="costo">S/ 150.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A10437C</td>
+        <td>DAMA</td>
+        <td>37-39</td>
+        <td class="foto-cell"><img src="A10437C.png" alt="A10437C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 450.00</td>
+        <td class="costo">S/ 120.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A08261C</td>
+        <td>DAMA</td>
+        <td>36-39</td>
+        <td class="foto-cell"><img src="A08261C.png" alt="A08261C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 154.00</td>
+        <td class="costo">S/ 139.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A12310C</td>
+        <td>DAMA</td>
+        <td>36 - 39</td>
+        <td class="foto-cell"><img src="A12310C.png" alt="A12310C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 174.95</td>
+        <td class="costo">S/ 105.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A12314C</td>
+        <td>DAMA</td>
+        <td>37 - 39.5</td>
+        <td class="foto-cell"><img src="A12314C.png" alt="A12314C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 174.95</td>
+        <td class="costo">S/ 105.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A04688C</td>
+        <td>DAMA</td>
+        <td>36.5 - 39.5</td>
+        <td class="foto-cell"><img src="A04688C.png" alt="A04688C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 507.00</td>
+        <td class="costo">S/ 105.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A06435C</td>
+        <td>DAMA</td>
+        <td>36 - 39.5</td>
+        <td class="foto-cell"><img src="A06435C.png" alt="A06435C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 259.90</td>
+        <td class="costo">S/ 125.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A06478C</td>
+        <td>DAMA</td>
+        <td>36 - 39.5</td>
+        <td class="foto-cell"><img src="A06478C.png" alt="A06478C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 150.00</td>
+        <td class="costo">S/ 150.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">164027C</td>
+        <td>DAMA</td>
+        <td>36 - 38</td>
+        <td class="foto-cell"><img src="164027C.png" alt="164027C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 159.99</td>
+        <td class="costo">S/ 81.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">A09399C</td>
+        <td>DAMA</td>
+        <td>35 - 39.5</td>
+        <td class="foto-cell"><img src="A09399C.png" alt="A09399C" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 174.95</td>
+        <td class="costo">S/ 105.00</td>
+    </tr>
+</tbody>
+
+            </table>
+        </div>
+        
+        <!-- TABLA UMBRO -->
+        <div class="table-container">
+            <div class="umbro-section-title">UMBRO</div>
+            <table class="umbro-table">
+                <thead>
+                    <tr>
+                        <th class="umbro-table-header">CÓDIGO</th>
+                        <th class="umbro-table-header">SEXO</th>
+                        <th class="umbro-table-header">TALLAS</th>
+                        <th class="umbro-table-header">FOTO</th>
+                        <th class="umbro-table-header">Precio Prom</th>
+                        <th class="umbro-table-header">Costo</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td class="codigo">81967U-096</td>
+        <td>HOMBRE</td>
+        <td>USA 7 - USA 11</td>
+        <td class="foto-cell"><img src="81967U-096.png" alt="81967U-096" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 79.90</td>
+        <td class="costo">S/ 40.00</td>
+    </tr>
+    <tr>
+        <td class="codigo">81967U-090</td>
+        <td>HOMBRE</td>
+        <td>USA 7 - USA 11</td>
+        <td class="foto-cell"><img src="81967U-090.png" alt="81967U-090" style="width: 60px; height: 40px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;"></td>
+        <td class="precio">S/ 79.90</td>
+        <td class="costo">S/ 40.00</td>
+    </tr>
+</tbody>
+
+            </table>
+        </div>
+        
+        <div class="download-section">
+            <p><strong>Archivo Excel generado con formato profesional</strong></p>
+            <button class="download-btn" onclick="downloadExcel()">📊 Descargar como Excel</button>
+            <button class="download-btn" onclick="downloadCSV()">📋 Descargar como CSV</button>
+        </div>
+    </div>
+
+    <script>
+        function downloadExcel() {
+            // Crear contenido para Excel combinando ambas tablas
+            const converseTable = document.querySelector('.converse-table');
+            const umbroTable = document.querySelector('.umbro-table');
+            
+            // Crear workbook con múltiples hojas
+            const wb = XLSX.utils.book_new();
+            
+            // Hoja Converse
+            const wsConverse = XLSX.utils.table_to_sheet(converseTable);
+            XLSX.utils.book_append_sheet(wb, wsConverse, "Converse");
+            
+            // Hoja Umbro
+            const wsUmbro = XLSX.utils.table_to_sheet(umbroTable);
+            XLSX.utils.book_append_sheet(wb, wsUmbro, "Umbro");
+            
+            // Hoja combinada
+            const combinedData = [];
+            
+            // Añadir header
+            combinedData.push(['MARCA', 'CÓDIGO', 'SEXO', 'TALLAS', 'FOTO', 'Precio Prom', 'Costo']);
+            
+            // Añadir datos de Converse
+            const converseRows = converseTable.querySelectorAll('tbody tr');
+            converseRows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells.length > 1) {
+                    const rowData = ['CONVERSE'];
+                    for (let i = 1; i < cells.length; i++) {
+                        rowData.push(cells[i].innerText);
+                    }
+                    combinedData.push(rowData);
+                }
+            });
+            
+            // Añadir datos de Umbro
+            const umbroRows = umbroTable.querySelectorAll('tbody tr');
+            umbroRows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const rowData = ['UMBRO'];
+                cells.forEach(cell => {
+                    rowData.push(cell.innerText);
+                });
+                combinedData.push(rowData);
+            });
+            
+            const wsCombined = XLSX.utils.aoa_to_sheet(combinedData);
+            XLSX.utils.book_append_sheet(wb, wsCombined, "Catálogo Completo");
+            
+            XLSX.writeFile(wb, 'catalogo_zapatos.xlsx');
+        }
+        
+        function downloadCSV() {
+            let csv = [];
+            
+            // Header
+            csv.push('"MARCA","CÓDIGO","SEXO","TALLAS","FOTO","Precio Prom","Costo"');
+            
+            // Datos Converse
+            const converseRows = document.querySelectorAll('.converse-table tbody tr');
+            converseRows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells.length > 1) {
+                    const rowData = ['"CONVERSE"'];
+                    for (let i = 1; i < cells.length; i++) {
+                        rowData.push('"' + cells[i].innerText + '"');
+                    }
+                    csv.push(rowData.join(','));
+                }
+            });
+            
+            // Datos Umbro
+            const umbroRows = document.querySelectorAll('.umbro-table tbody tr');
+            umbroRows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const rowData = ['"UMBRO"'];
+                cells.forEach(cell => {
+                    rowData.push('"' + cell.innerText + '"');
+                });
+                csv.push(rowData.join(','));
+            });
+            
+            const csvContent = csv.join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.setAttribute('hidden', '');
+            a.setAttribute('href', url);
+            a.setAttribute('download', 'catalogo_zapatos.csv');
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        
+        // Cargar librería XLSX para Excel
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>
